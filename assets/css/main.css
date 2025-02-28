@@ -1,0 +1,84 @@
+/* Estilos para las tarjetas de servicios */
+.service-card {
+    position: relative; /* Posición relativa para que el detalle se posicione respecto a la tarjeta */
+}
+.service-card .details {
+    position: absolute; /* Posición absoluta para que el detalle aparezca sobre la tarjeta */
+    top: 100%; /* Justo debajo de la tarjeta */
+    left: 0;
+    transform: translateY(10px); /* Desplazamiento inicial para la animación */
+    z-index: 10; /* Asegura que el detalle esté por encima de otros elementos */
+}
+.service-card:hover .details {
+    opacity: 1; /* Mostrar el detalle al pasar el mouse */
+    transform: translateY(0); /* Animación de desplazamiento */
+}
+@media (max-width: 768px) {
+    .service-card .details {
+        position: static; /* En móviles, el detalle aparece en flujo normal */
+        opacity: 0; /* Oculto por defecto */
+        max-height: 0; /* Altura inicial 0 para animación */
+        overflow: hidden; /* Oculta el contenido que desborda */
+        transform: none; /* Sin transformación en móviles */
+    }
+    .service-card:active .details {
+        opacity: 1; /* Mostrar al tocar */
+        max-height: 200px; /* Altura máxima para mostrar el contenido */
+        margin-top: 10px; /* Espacio superior */
+    }
+}
+
+/* Estilos de respaldo por si Tailwind falla */
+body {
+    background-color: #172554; /* Azul oscuro */
+    color: #e5e7eb; /* Gris claro */
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #172554;
+    color: white;
+    padding: 1rem;
+    z-index: 50;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+header nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+header a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+header a:hover {
+    color: #fbbf24; /* Amarillo suave */
+}
+section {
+    padding-top: 6rem; /* Espacio para el header fijo */
+    padding-bottom: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+footer {
+    background-color: #172554;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+img, iframe {
+    max-width: 100%;
+    height: auto;
+}
