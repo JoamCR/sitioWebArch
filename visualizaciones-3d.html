@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizaciones 3D - Arquitectura Pro</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body class="bg-white font-roboto text-gray-800">
+    <!-- Header (igual) -->
+    <header class="bg-blue-900 text-white p-4 sticky top-0 z-50">
+        <!-- Misma navegación -->
+    </header>
+
+    <!-- Visualizaciones 3D -->
+    <section class="container mx-auto py-12">
+        <h2 class="text-3xl font-bold text-center mb-8">Visualizaciones 3D</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Galería de Videos -->
+            <div class="video-item">
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" loading="lazy" allowfullscreen class="w-full h-64 rounded"></iframe>
+                <p class="mt-2 text-center">Recorrido 3D - Casa Moderna</p>
+            </div>
+            <div class="video-item">
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" loading="lazy" allowfullscreen class="w-full h-64 rounded"></iframe>
+                <p class="mt-2 text-center">Recorrido 3D - Edificio Comercial</p>
+            </div>
+        </div>
+        <!-- Modelo 3D (Opcional) -->
+        <div class="mt-12">
+            <h3 class="text-2xl font-semibold text-center mb-4">Modelo 3D Interactivo</h3>
+            <div id="3d-container" class="w-full h-96 bg-gray-200"></div>
+        </div>
+    </section>
+
+    <!-- Footer (igual) -->
+    <footer class="bg-blue-900 text-white p-4 text-center">
+        <p>&copy; 2025 Arquitectura Pro. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

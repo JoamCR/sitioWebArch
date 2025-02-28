@@ -1,0 +1,46 @@
+/* Fuentes */
+@font-face {
+    font-family: 'Roboto';
+    src: url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+/* Hover en Servicios */
+.service-card {
+    position: relative;
+}
+.service-card .details {
+    top: 100%;
+    left: 0;
+    transform: translateY(10px);
+    z-index: 10;
+}
+.service-card:hover .details {
+    opacity: 1;
+    transform: translateY(0);
+}
+@media (max-width: 768px) {
+    .service-card .details {
+        position: static;
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        transform: none;
+    }
+    .service-card:active .details {
+        opacity: 1;
+        max-height: 200px;
+        margin-top: 10px;
+    }
+}
+
+/* Optimización de imágenes y videos */
+img, iframe {
+    max-width: 100%;
+    height: auto;
+}
