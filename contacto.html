@@ -31,50 +31,52 @@
 <body class="bg-blue-950 text-gray-200" data-lang="es">
     <div id="navbar-placeholder"></div>
 
-    <!-- Sección de Contacto -->
-    <section class="container mx-auto pt-24 py-12">
-        <!-- Título de la sección -->
-        <h2 class="text-3xl font-semibold text-center mb-8 transition-opacity duration-500 opacity-0" data-i18n="contact.title">Contáctanos</h2>
-        <!-- Formulario de contacto -->
-        <form class="max-w-lg mx-auto bg-gray-300 p-6 rounded-lg transition-transform duration-500 transform hover:scale-105" action="mailto:info@arquitecturapro.com" method="post" enctype="text/plain">
-            <div class="mb-4">
-                <label for="name" class="block text-gray-700" data-i18n="contact.name">Nombre</label>
-                <input type="text" id="name" name="name" class="w-full p-2 rounded border" required>
-            </div>
-            <div class="mb-4">
-                <label for="email" class="block text-gray-700" data-i18n="contact.email">Correo</label>
-                <input type="email" id="email" name="email" class="w-full p-2 rounded border" required>
-            </div>
-            <div class="mb-4">
-                <label for="message" class="block text-gray-700" data-i18n="contact.message">Mensaje</label>
-                <textarea id="message" name="message" class="w-full p-2 rounded border" rows="4" required></textarea>
-            </div>
-            <!-- Botón de envío con efecto hover -->
-            <button type="submit" class="bg-yellow-400 text-blue-950 px-6 py-2 rounded transition-all hover:shadow-lg hover:blur-[0.5px] hover:scale-105" data-i18n="contact.submit">Enviar</button>
-        </form>
+    <main class="flex-grow">
+        <!-- Sección de Contacto -->
+        <section class="container mx-auto pt-24 py-12">
+            <!-- Título de la sección -->
+            <h2 class="text-3xl font-semibold text-center mb-8 transition-opacity duration-500 opacity-0" data-i18n="contact.title">Contáctanos</h2>
+            <!-- Formulario de contacto -->
+            <form class="max-w-lg mx-auto bg-gray-300 p-6 rounded-lg transition-transform duration-500 transform hover:scale-105" action="mailto:info@arquitecturapro.com" method="post" enctype="text/plain">
+                <div class="mb-4">
+                    <label for="name" class="block text-gray-700" data-i18n="contact.name">Nombre</label>
+                    <input type="text" id="name" name="name" class="w-full p-2 rounded border" required>
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-700" data-i18n="contact.email">Correo</label>
+                    <input type="email" id="email" name="email" class="w-full p-2 rounded border" required>
+                </div>
+                <div class="mb-4">
+                    <label for="message" class="block text-gray-700" data-i18n="contact.message">Mensaje</label>
+                    <textarea id="message" name="message" class="w-full p-2 rounded border" rows="4" required></textarea>
+                </div>
+                <!-- Botón de envío con efecto hover -->
+                <button type="submit" class="bg-yellow-400 text-blue-950 px-6 py-2 rounded transition-all hover:shadow-lg hover:blur-[0.5px] hover:scale-105" data-i18n="contact.submit">Enviar</button>
+            </form>
 
-        <!-- Google Maps Embed -->
-        <div class="mt-12 max-w-lg mx-auto bg-gray-300 p-6 rounded-lg shadow-lg">
-            <h3 class="text-2xl font-semibold mb-4 text-gray-800 text-center" data-i18n="contact.location">Nuestra Ubicación</h3>
-            <div class="aspect-w-16 aspect-h-9">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.253032549926!2d144.9630573153163!3d-37.81729097975143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642b9c7482f3d%3A0x5045675218d6a80!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1619864299943!5m2!1sen!2sau"
-                    width="100%"
-                    height="300"
-                    style="border:0;"
-                    allowfullscreen=""
-                    loading="lazy"
-                ></iframe>
+            <!-- Google Maps Embed -->
+            <div class="mt-12 max-w-lg mx-auto bg-gray-300 p-6 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-semibold mb-4 text-gray-800 text-center" data-i18n="contact.location">Nuestra Ubicación</h3>
+                <div class="aspect-w-16 aspect-h-9">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.253032549926!2d144.9630573153163!3d-37.81729097975143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642b9c7482f3d%3A0x5045675218d6a80!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1619864299943!5m2!1sen!2sau"
+                        width="100%"
+                        height="300"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                    ></iframe>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/XXXXXXXXXX" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-colors z-40">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181 0 6.167 1.24 8.413 3.488 2.246 2.248 3.481 5.235 3.481 8.414 0 6.559-5.339 11.894-11.896 11.894-1.928-.001-3.851-.555-5.579-1.622l-6.205 1.622zm1.821-4.142l-.286-.144s-1.849.65-2.502.65c-.214 0-.419-.016-.622-.047l.004-.002c-1.396-.16-2.518-1.579-2.52-3.329v-.004l-.004-.002s-.012-3.158 1.834-5.234c1.86-2.115 5.176-3.766 8.508-3.766 3.037 0 5.864 1.189 7.982 3.307 2.118 2.118 3.306 4.498 3.306 7.218 0 5.093-4.168 9.264-9.266 9.264-1.916 0-3.801-.581-5.38-1.748zM9.544 7.241c-.247-.525-.631-.532-.88-.532h-1.637c-.256 0-.671.18-.946.545-.275.364-.782.915-.782 2.222 0 1.298.814 2.576.924 2.766.11.191 1.638 2.516 3.978 3.568 2.34.82 2.79.626 3.336.586.544-.041 1.691-.7 1.938-1.385.247-.685.247-1.27.174-1.386-.073-.116-.275-.18-.57-.327-.295-.148-.567-.234-.792-.261-.225-.028-.199-.175-.138-.276.06-.1.671-.784.909-.949.239-.164.33-.217.447-.021.118.196.766 1.848 1.543 2.197.777.349 1.166.452 1.341.28.174-.173.247-.685.187-1.381-.06-.696-.239-1.124-.448-1.472s-.419-.59-.597-.847c-.179-.257-.384-.483-.586-.685-.2-.2-.452-.525-.174-.781z"/>
-        </svg>
-    </a>
+        <!-- WhatsApp Floating Button -->
+        <a href="https://wa.me/XXXXXXXXXX" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-colors z-40">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181 0 6.167 1.24 8.413 3.488 2.246 2.248 3.481 5.235 3.481 8.414 0 6.559-5.339 11.894-11.896 11.894-1.928-.001-3.851-.555-5.579-1.622l-6.205 1.622zm1.821-4.142l-.286-.144s-1.849.65-2.502.65c-.214 0-.419-.016-.622-.047l.004-.002c-1.396-.16-2.518-1.579-2.52-3.329v-.004l-.004-.002s-.012-3.158 1.834-5.234c1.86-2.115 5.176-3.766 8.508-3.766 3.037 0 5.864 1.189 7.982 3.307 2.118 2.118 3.306 4.498 3.306 7.218 0 5.093-4.168 9.264-9.266 9.264-1.916 0-3.801-.581-5.38-1.748zM9.544 7.241c-.247-.525-.631-.532-.88-.532h-1.637c-.256 0-.671.18-.946.545-.275.364-.782.915-.782 2.222 0 1.298.814 2.576.924 2.766.11.191 1.638 2.516 3.978 3.568 2.34.82 2.79.626 3.336.586.544-.041 1.691-.7 1.938-1.385.247-.685.247-1.27.174-1.386-.073-.116-.275-.18-.57-.327-.295-.148-.567-.234-.792-.261-.225-.028-.199-.175-.138-.276.06-.1.671-.784.909-.949.239-.164.33-.217.447-.021.118.196.766 1.848 1.543 2.197.777.349 1.166.452 1.341.28.174-.173.247-.685.187-1.381-.06-.696-.239-1.124-.448-1.472s-.419-.59-.597-.847c-.179-.257-.384-.483-.586-.685-.2-.2-.452-.525-.174-.781z"/>
+            </svg>
+        </a>
+    </main>
 
     <!-- Pie de página -->
     <div id="footer-placeholder"></div>

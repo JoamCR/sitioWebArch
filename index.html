@@ -29,77 +29,78 @@
     </style>
 </head>
 <body class="bg-blue-950 text-gray-200" data-lang="es">
-    <div id="navbar-placeholder"></div>
-
-    <!-- Sección Hero con Parallax -->
-    <section class="relative h-96 bg-cover bg-center parallax" style="background-image: url('assets/images/hero.webp');">
-        <!-- Capa de fondo oscurecida -->
-        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-            <div class="text-center text-white">
-                <!-- Título principal -->
-                <h1 class="text-4xl md:text-5xl font-semibold mb-4 transition-opacity duration-500 opacity-0" data-i18n="home.hero">Soluciones Arquitectónicas Innovadoras</h1>
-                <!-- Botón con efecto hover -->
-                <a href="servicios.html" class="bg-yellow-400 text-blue-950 px-6 py-3 rounded-lg transition-all hover:shadow-lg hover:blur-[0.5px] hover:scale-105">Explora Servicios</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sección "Por Qué Elegirnos" -->
-    <section class="container mx-auto py-16 text-center">
-        <h2 class="text-3xl font-semibold mb-8 transition-opacity duration-500 opacity-0" data-i18n="home.why_choose_us.title">¿Por Qué Elegirnos?</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="bg-gray-800 p-6 rounded-lg shadow-lg transition-transform duration-500 transform hover:scale-105">
-                <h3 class="text-xl font-semibold mb-2 text-yellow-400" data-i18n="home.why_choose_us.innovation_title">Innovación Constante</h3>
-                <p class="text-gray-300" data-i18n="home.why_choose_us.innovation_text">Aplicamos las últimas tendencias y tecnologías para diseños vanguardistas.</p>
-            </div>
-            <div class="bg-gray-800 p-6 rounded-lg shadow-lg transition-transform duration-500 transform hover:scale-105">
-                <h3 class="text-xl font-semibold mb-2 text-yellow-400" data-i18n="home.why_choose_us.experience_title">Experiencia Comprobada</h3>
-                <p class="text-gray-300" data-i18n="home.why_choose_us.experience_text">Más de 10 años en el mercado construyendo sueños y realidades.</p>
-            </div>
-            <div class="bg-gray-800 p-6 rounded-lg shadow-lg transition-transform duration-500 transform hover:scale-105">
-                <h3 class="text-xl font-semibold mb-2 text-yellow-400" data-i18n="home.why_choose_us.satisfaction_title">Clientes Felices</h3>
-                <p class="text-gray-300" data-i18n="home.why_choose_us.satisfaction_text">Nuestro compromiso es la satisfacción total en cada proyecto.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sección de Proyectos Destacados (usando las tarjetas de servicio como plantilla) -->
-    <section class="container mx-auto py-16">
-        <h2 class="text-3xl font-semibold text-center mb-8 transition-opacity duration-500 opacity-0" data-i18n="home.featured_projects.title">Proyectos Destacados</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Proyecto 1 - Reutilizando estructura de service-card para consistencia -->
-            <div class="service-card bg-gray-300 p-6 rounded-lg transition-transform duration-500 transform hover:scale-105" data-bg-image="assets/images/proyecto1.webp">
-                <h3 class="text-xl font-semibold mb-2 text-gray-800" data-i18n="home.featured_projects.project1_title">Residencia Moderna</h3>
-                <p class="brief text-gray-700" data-i18n="home.featured_projects.project1_brief">Diseño minimalista y funcional.</p>
-                <div class="details bg-blue-950 text-white p-4 rounded-lg opacity-0 transition-all duration-300">
-                    <p data-i18n="home.featured_projects.project1_details">Un espacio pensado para la vida contemporánea, integrando luz natural y tecnología inteligente.</p>
+        <div id="navbar-placeholder"></div>
+    
+        <main class="flex-grow">
+            <!-- Sección Hero con Parallax -->
+            <section class="relative h-96 bg-cover bg-center parallax" style="background-image: url('assets/images/hero.webp');">
+                <!-- Capa de fondo oscurecida -->
+                <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                    <div class="text-center text-white">
+                        <!-- Título principal -->
+                        <h1 class="text-4xl md:text-5xl font-semibold mb-4 transition-opacity duration-500 opacity-0" data-i18n="home.hero">Soluciones Arquitectónicas Innovadoras</h1>
+                        <!-- Botón con efecto hover -->
+                        <a href="servicios.html" class="bg-yellow-400 text-blue-950 px-6 py-3 rounded-lg transition-all hover:shadow-lg hover:blur-[0.5px] hover:scale-105">Explora Servicios</a>
+                    </div>
                 </div>
-            </div>
-            <!-- Proyecto 2 -->
-            <div class="service-card bg-gray-300 p-6 rounded-lg transition-transform duration-500 transform hover:scale-105" data-bg-image="assets/images/proyecto2.webp">
-                <h3 class="text-xl font-semibold mb-2 text-gray-800" data-i18n="home.featured_projects.project2_title">Edificio Corporativo</h3>
-                <p class="brief text-gray-700" data-i18n="home.featured_projects.project2_brief">Innovación y eficiencia en cada nivel.</p>
-                <div class="details bg-blue-950 text-white p-4 rounded-lg opacity-0 transition-all duration-300">
-                    <p data-i18n="home.featured_projects.project2_details">Diseño arquitectónico que potencia la productividad y el bienestar laboral, con certificaciones de sostenibilidad.</p>
+            </section>
+    
+            <!-- Sección "Por Qué Elegirnos" -->
+            <section class="container mx-auto py-16 text-center">
+                <h2 class="text-3xl font-semibold mb-8 transition-opacity duration-500 opacity-0" data-i18n="home.why_choose_us.title">¿Por Qué Elegirnos?</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-lg transition-transform duration-500 transform hover:scale-105">
+                        <h3 class="text-xl font-semibold mb-2 text-yellow-400" data-i18n="home.why_choose_us.innovation_title">Innovación Constante</h3>
+                        <p class="text-gray-300" data-i18n="home.why_choose_us.innovation_text">Aplicamos las últimas tendencias y tecnologías para diseños vanguardistas.</p>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-lg transition-transform duration-500 transform hover:scale-105">
+                        <h3 class="text-xl font-semibold mb-2 text-yellow-400" data-i18n="home.why_choose_us.experience_title">Experiencia Comprobada</h3>
+                        <p class="text-gray-300" data-i18n="home.why_choose_us.experience_text">Más de 10 años en el mercado construyendo sueños y realidades.</p>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-lg transition-transform duration-500 transform hover:scale-105">
+                        <h3 class="text-xl font-semibold mb-2 text-yellow-400" data-i18n="home.why_choose_us.satisfaction_title">Clientes Felices</h3>
+                        <p class="text-gray-300" data-i18n="home.why_choose_us.satisfaction_text">Nuestro compromiso es la satisfacción total en cada proyecto.</p>
+                    </div>
                 </div>
-            </div>
-            <!-- Proyecto 3 -->
-            <div class="service-card bg-gray-300 p-6 rounded-lg transition-transform duration-500 transform hover:scale-105" data-bg-image="assets/images/proyecto3.webp">
-                <h3 class="text-xl font-semibold mb-2 text-gray-800" data-i18n="home.featured_projects.project3_title">Espacio Urbano</h3>
-                <p class="brief text-gray-700" data-i18n="home.featured_projects.project3_brief">Revitalizando la vida en la ciudad.</p>
-                <div class="details bg-blue-950 text-white p-4 rounded-lg opacity-0 transition-all duration-300">
-                    <p data-i18n="home.featured_projects.project3_details">Propuesta innovadora para un parque urbano que fomenta la comunidad y el respeto por el medio ambiente.</p>
+            </section>
+    
+            <!-- Sección de Proyectos Destacados (usando las tarjetas de servicio como plantilla) -->
+            <section class="container mx-auto py-16">
+                <h2 class="text-3xl font-semibold text-center mb-8 transition-opacity duration-500 opacity-0" data-i18n="home.featured_projects.title">Proyectos Destacados</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Proyecto 1 - Reutilizando estructura de service-card para consistencia -->
+                    <div class="service-card bg-gray-300 p-6 rounded-lg transition-transform duration-500 transform hover:scale-105" data-bg-image="assets/images/proyecto1.webp">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800" data-i18n="home.featured_projects.project1_title">Residencia Moderna</h3>
+                        <p class="brief text-gray-700" data-i18n="home.featured_projects.project1_brief">Diseño minimalista y funcional.</p>
+                        <div class="details bg-blue-950 text-white p-4 rounded-lg opacity-0 transition-all duration-300">
+                            <p data-i18n="home.featured_projects.project1_details">Un espacio pensado para la vida contemporánea, integrando luz natural y tecnología inteligente.</p>
+                        </div>
+                    </div>
+                    <!-- Proyecto 2 -->
+                    <div class="service-card bg-gray-300 p-6 rounded-lg transition-transform duration-500 transform hover:scale-105" data-bg-image="assets/images/proyecto2.webp">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800" data-i18n="home.featured_projects.project2_title">Edificio Corporativo</h3>
+                        <p class="brief text-gray-700" data-i18n="home.featured_projects.project2_brief">Innovación y eficiencia en cada nivel.</p>
+                        <div class="details bg-blue-950 text-white p-4 rounded-lg opacity-0 transition-all duration-300">
+                            <p data-i18n="home.featured_projects.project2_details">Diseño arquitectónico que potencia la productividad y el bienestar laboral, con certificaciones de sostenibilidad.</p>
+                        </div>
+                    </div>
+                    <!-- Proyecto 3 -->
+                    <div class="service-card bg-gray-300 p-6 rounded-lg transition-transform duration-500 transform hover:scale-105" data-bg-image="assets/images/proyecto3.webp">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800" data-i18n="home.featured_projects.project3_title">Espacio Urbano</h3>
+                        <p class="brief text-gray-700" data-i18n="home.featured_projects.project3_brief">Revitalizando la vida en la ciudad.</p>
+                        <div class="details bg-blue-950 text-white p-4 rounded-lg opacity-0 transition-all duration-300">
+                            <p data-i18n="home.featured_projects.project3_details">Propuesta innovadora para un parque urbano que fomenta la comunidad y el respeto por el medio ambiente.</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="text-center mt-12">
-            <a href="portafolio.html" class="bg-yellow-400 text-blue-950 px-6 py-3 rounded-lg transition-all hover:shadow-lg hover:blur-[0.5px] hover:scale-105" data-i18n="home.featured_projects.view_all">Ver Todos los Proyectos</a>
-        </div>
-    </section>
-
-    <!-- Pie de página -->
-    <div id="footer-placeholder"></div>
-
+                <div class="text-center mt-12">
+                    <a href="portafolio.html" class="bg-yellow-400 text-blue-950 px-6 py-3 rounded-lg transition-all hover:shadow-lg hover:blur-[0.5px] hover:scale-105" data-i18n="home.featured_projects.view_all">Ver Todos los Proyectos</a>
+                </div>
+            </section>
+        </main>
+    
+        <!-- Pie de página -->
+        <div id="footer-placeholder"></div>
     <!-- Scripts -->
     <script src="assets/js/main.js"></script>
 

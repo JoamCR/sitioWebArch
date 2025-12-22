@@ -101,58 +101,66 @@
 }
 
 /* Estilos de respaldo */
+html, body {
+    height: 100%;
+}
 body {
+    display: flex;
+    flex-direction: column;
     background-color: var(--primary-bg);
     color: var(--text-color);
     font-family: var(--font-family);
 }
 
-/* Ensure header links are visible regardless of dynamic loading */
-#navbar-placeholder a {
-    color: white;
-}
+/* Add this style to your main content container (e.g., a <main> tag or div wrapping all sections between header and footer) */
+/* .main-content-wrapper { flex-grow: 1; } */
 
-header {
+/* Styles for the dynamically loaded navbar */
+#navbar-placeholder header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     background-color: var(--primary-bg);
-    color: white;
+    color: white; /* Ensure text color is white for the header */
     padding: 1rem;
     z-index: 50;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
-header nav {
+
+#navbar-placeholder nav {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-header ul {
+
+#navbar-placeholder nav ul {
     display: flex;
     gap: 1.5rem;
     list-style: none;
     margin: 0;
     padding: 0;
 }
-header a {
-    color: white;
+
+#navbar-placeholder nav a {
+    color: white; /* Explicitly set color for nav links */
     text-decoration: none;
     transition: color 0.3s ease;
 }
-header a:hover {
+
+#navbar-placeholder nav a:hover {
     color: var(--accent-color);
 }
 
 /* Enhanced hover effects for navigation links and buttons */
-nav a.hover\:text-yellow-400,
+#navbar-placeholder nav a.hover\:text-yellow-400,
 button.bg-yellow-400 {
     transition: all 0.3s ease-in-out;
 }
 
-nav a.hover\:text-yellow-400:hover,
+#navbar-placeholder nav a.hover\:text-yellow-400:hover,
 button.bg-yellow-400:hover {
     transform: translateY(-2px) scale(1.02);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);

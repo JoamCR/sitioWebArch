@@ -29,60 +29,61 @@
     </style>
 </head>
 <body class="bg-blue-950 text-gray-200" data-lang="es">
-    <div id="navbar-placeholder"></div>
-
-    <!-- Sección de Servicios -->
-    <section class="container mx-auto pt-24 py-12">
-        <!-- Título de la sección -->
-        <h2 class="text-3xl font-semibold text-center mb-8 transition-opacity duration-500 opacity-0" data-i18n="services.title">Nuestros Servicios</h2>
-        <!-- Grid de servicios -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Tarjeta de servicio: Diseño Arquitectónico -->
-            <div class="service-card bg-gray-300 p-6 rounded-lg transition-transform duration-500 transform hover:scale-105" data-bg-image="assets/images/design-bg.webp">
-                <h3 class="text-xl font-semibold mb-2 text-gray-800" data-i18n="services.design.title">Diseño Arquitectónico</h3>
-                <p class="brief text-gray-700" data-i18n="services.design.brief">Creación de espacios únicos.</p>
-                <div class="details bg-blue-950 text-white p-4 rounded-lg opacity-0 transition-all duration-300">
-                    <p data-i18n="services.design.details">Conceptualización, planos preliminares y diseño personalizado.</p>
+        <div id="navbar-placeholder"></div>
+    
+        <main class="flex-grow">
+            <!-- Sección de Servicios -->
+            <section class="container mx-auto pt-24 py-12">
+                <!-- Título de la sección -->
+                <h2 class="text-3xl font-semibold text-center mb-8 transition-opacity duration-500 opacity-0" data-i18n="services.title">Nuestros Servicios</h2>
+                <!-- Grid de servicios -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Tarjeta de servicio: Diseño Arquitectónico -->
+                    <div class="service-card bg-gray-300 p-6 rounded-lg transition-transform duration-500 transform hover:scale-105" data-bg-image="assets/images/design-bg.webp">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800" data-i18n="services.design.title">Diseño Arquitectónico</h3>
+                        <p class="brief text-gray-700" data-i18n="services.design.brief">Creación de espacios únicos.</p>
+                        <div class="details bg-blue-950 text-white p-4 rounded-lg opacity-0 transition-all duration-300">
+                            <p data-i18n="services.design.details">Conceptualización, planos preliminares y diseño personalizado.</p>
+                        </div>
+                    </div>
+                    <!-- Tarjeta de servicio: Planos -->
+                    <div class="service-card bg-gray-300 p-6 rounded-lg transition-transform duration-500 transform hover:scale-105" data-bg-image="assets/images/plans-bg.webp">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800" data-i18n="services.plans.title">Planos</h3>
+                        <p class="brief text-gray-700" data-i18n="services.plans.brief">Detalles técnicos precisos.</p>
+                        <div class="details bg-blue-950 text-white p-4 rounded-lg opacity-0 transition-all duration-300">
+                            <p data-i18n="services.plans.details">Planos estructurales, eléctricos y mecánicos en formatos estándar.</p>
+                        </div>
+                    </div>
+                    <!-- Tarjeta de servicio: Renderizaciones -->
+                    <div class="service-card bg-gray-300 p-6 rounded-lg transition-transform duration-500 transform hover:scale-105" data-bg-image="assets/images/renders-bg.webp">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800" data-i18n="services.renders.title">Renderizaciones</h3>
+                        <p class="brief text-gray-700" data-i18n="services.renders.brief">Imágenes fotorrealistas.</p>
+                        <div class="details bg-blue-950 text-white p-4 rounded-lg opacity-0 transition-all duration-300">
+                            <p data-i18n="services.renders.details">Render en alta resolución, ajustes personalizados, entrega en 48h.</p>
+                        </div>
+                    </div>
+                    <!-- Tarjeta de servicio: Recorridos 3D -->
+                    <div class="service-card bg-gray-300 p-6 rounded-lg transition-transform duration-500 transform hover:scale-105" data-bg-image="assets/images/tours-bg.webp">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800" data-i18n="services.tours.title">Recorridos 3D</h3>
+                        <p class="brief text-gray-700" data-i18n="services.tours.brief">Visualización interactiva.</p>
+                        <div class="details bg-blue-950 text-white p-4 rounded-lg opacity-0 transition-all duration-300">
+                            <p data-i18n="services.tours.details">Recorridos virtuales en 3D, compatibles con VR, entrega en 72h.</p>
+                        </div>
+                    </div>
+                    <!-- Tarjeta de servicio: Cotizaciones -->
+                    <div class="service-card bg-gray-300 p-6 rounded-lg transition-transform duration-500 transform hover:scale-105" data-bg-image="assets/images/quotes-bg.webp">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800" data-i18n="services.quotes.title">Cotizaciones</h3>
+                        <p class="brief text-gray-700" data-i18n="services.quotes.brief">Presupuestos detallados.</p>
+                        <div class="details bg-blue-950 text-white p-4 rounded-lg opacity-0 transition-all duration-300">
+                            <p data-i18n="services.quotes.details">Análisis de costos, materiales y cronograma personalizado.</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <!-- Tarjeta de servicio: Planos -->
-            <div class="service-card bg-gray-300 p-6 rounded-lg transition-transform duration-500 transform hover:scale-105" data-bg-image="assets/images/plans-bg.webp">
-                <h3 class="text-xl font-semibold mb-2 text-gray-800" data-i18n="services.plans.title">Planos</h3>
-                <p class="brief text-gray-700" data-i18n="services.plans.brief">Detalles técnicos precisos.</p>
-                <div class="details bg-blue-950 text-white p-4 rounded-lg opacity-0 transition-all duration-300">
-                    <p data-i18n="services.plans.details">Planos estructurales, eléctricos y mecánicos en formatos estándar.</p>
-                </div>
-            </div>
-            <!-- Tarjeta de servicio: Renderizaciones -->
-            <div class="service-card bg-gray-300 p-6 rounded-lg transition-transform duration-500 transform hover:scale-105" data-bg-image="assets/images/renders-bg.webp">
-                <h3 class="text-xl font-semibold mb-2 text-gray-800" data-i18n="services.renders.title">Renderizaciones</h3>
-                <p class="brief text-gray-700" data-i18n="services.renders.brief">Imágenes fotorrealistas.</p>
-                <div class="details bg-blue-950 text-white p-4 rounded-lg opacity-0 transition-all duration-300">
-                    <p data-i18n="services.renders.details">Render en alta resolución, ajustes personalizados, entrega en 48h.</p>
-                </div>
-            </div>
-            <!-- Tarjeta de servicio: Recorridos 3D -->
-            <div class="service-card bg-gray-300 p-6 rounded-lg transition-transform duration-500 transform hover:scale-105" data-bg-image="assets/images/tours-bg.webp">
-                <h3 class="text-xl font-semibold mb-2 text-gray-800" data-i18n="services.tours.title">Recorridos 3D</h3>
-                <p class="brief text-gray-700" data-i18n="services.tours.brief">Visualización interactiva.</p>
-                <div class="details bg-blue-950 text-white p-4 rounded-lg opacity-0 transition-all duration-300">
-                    <p data-i18n="services.tours.details">Recorridos virtuales en 3D, compatibles con VR, entrega en 72h.</p>
-                </div>
-            </div>
-            <!-- Tarjeta de servicio: Cotizaciones -->
-            <div class="service-card bg-gray-300 p-6 rounded-lg transition-transform duration-500 transform hover:scale-105" data-bg-image="assets/images/quotes-bg.webp">
-                <h3 class="text-xl font-semibold mb-2 text-gray-800" data-i18n="services.quotes.title">Cotizaciones</h3>
-                <p class="brief text-gray-700" data-i18n="services.quotes.brief">Presupuestos detallados.</p>
-                <div class="details bg-blue-950 text-white p-4 rounded-lg opacity-0 transition-all duration-300">
-                    <p data-i18n="services.quotes.details">Análisis de costos, materiales y cronograma personalizado.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pie de página -->
-    <div id="footer-placeholder"></div>
-
+            </section>
+        </main>
+    
+        <!-- Pie de página -->
+        <div id="footer-placeholder"></div>
     <!-- Scripts -->
     <script src="assets/js/main.js"></script>
 </body>
