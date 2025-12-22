@@ -88,7 +88,13 @@
 /* Animaciones Premium */
 .fade-in {
     opacity: 1 !important;
-    transition: opacity 0.5s ease-in;
+    transform: translateY(0) !important; /* Final position for animation */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+/* Initial state for fade-in elements */
+[data-i18n]:not(.fade-in) {
+    opacity: 0;
+    transform: translateY(20px); /* Start slightly below */
 }
 .parallax {
     transition: transform 0.1s linear;
@@ -133,6 +139,20 @@ header a {
 header a:hover {
     color: var(--accent-color);
 }
+
+/* Enhanced hover effects for navigation links and buttons */
+nav a.hover\:text-yellow-400,
+button.bg-yellow-400 {
+    transition: all 0.3s ease-in-out;
+}
+
+nav a.hover\:text-yellow-400:hover,
+button.bg-yellow-400:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    filter: brightness(1.1); /* Slightly brighten on hover */
+}
+
 section {
     padding-top: 6rem;
     padding-bottom: 3rem;
@@ -148,4 +168,62 @@ footer {
 img, iframe {
     max-width: 100%;
     height: auto;
+}
+
+/* Generic Modal Styles */
+#generic-modal {
+    display: none; /* Hidden by default */
+}
+
+#generic-modal.active {
+    display: flex; /* Show when active */
+}
+
+.modal-overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: opacity 0.3s ease;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    position: relative;
+    max-width: 500px; /* Example max-width */
+    width: 90%; /* Example width */
+    transform: translateY(-20px); /* Initial position for animation */
+    opacity: 0; /* Initial opacity for animation */
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+#generic-modal.active .modal-content {
+    transform: translateY(0); /* Final position for animation */
+    opacity: 1; /* Final opacity for animation */
+}
+
+.modal-close {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4b5563;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.modal-close:hover {
+    color: #111827;
+}
+
+.modal-title {
+    color: var(--primary-bg);
+}
+
+.modal-body {
+    color: #4b5563;
 }

@@ -29,26 +29,7 @@
     </style>
 </head>
 <body class="bg-blue-950 text-gray-200" data-lang="es">
-    <!-- Barra de navegación fija -->}
-    <header class="fixed top-0 left-0 w-full bg-blue-950 text-white p-4 z-50 shadow-md">
-        <nav class="container mx-auto flex justify-between items-center">
-            <!-- Logo/título del sitio -->
-            <a href="index.html" class="text-2xl font-semibold">Arquitectura Pro</a>
-            <!-- Enlaces de navegación -->
-            <div class="flex items-center space-x-6">
-                <ul class="flex space-x-6">
-                    <li><a href="index.html" class="hover:text-yellow-400 transition-colors" data-i18n="nav.home">Inicio</a></li>
-                    <li><a href="servicios.html" class="hover:text-yellow-400 transition-colors" data-i18n="nav.services">Servicios</a></li>
-                    <li><a href="portafolio.html" class="hover:text-yellow-400 transition-colors" data-i18n="nav.portfolio">Portafolio</a></li>
-                    <li><a href="visualizaciones-3d.html" class="hover:text-yellow-400 transition-colors" data-i18n="nav.3d">3D</a></li>
-                    <li><a href="sobre-nosotros.html" class="hover:text-yellow-400 transition-colors" data-i18n="nav.about">Nosotros</a></li>
-                    <li><a href="contacto.html" class="hover:text-yellow-400 transition-colors" data-i18n="nav.contact">Contacto</a></li>
-                </ul>
-                <!-- Toggle de idioma -->
-                <button id="lang-toggle" class="bg-yellow-400 text-blue-950 px-3 py-1 rounded-lg hover:bg-yellow-500 transition-colors">EN/ES</button>
-            </div>
-        </nav>
-    </header>
+    <div id="navbar-placeholder"></div>
 
     <!-- Sección Hero con Parallax -->
     <section class="relative h-96 bg-cover bg-center parallax" style="background-image: url('assets/images/hero.webp');">
@@ -70,5 +51,17 @@
 
     <!-- Scripts -->
     <script src="assets/js/main.js"></script>
+
+    <!-- Generic Modal Structure -->
+    <div id="generic-modal" class="hidden fixed inset-0 z-[999] flex items-center justify-center">
+        <div class="modal-overlay absolute inset-0 bg-black opacity-70"></div>
+        <div class="modal-content bg-white p-6 rounded-lg shadow-lg z-10 max-w-lg w-full relative">
+            <button class="modal-close absolute top-3 right-3 text-gray-700 hover:text-gray-900 text-2xl font-bold">&times;</button>
+            <h3 class="modal-title text-2xl font-semibold mb-4 text-gray-800">Modal Title</h3>
+            <div class="modal-body text-gray-700">
+                <p>This is the content of the generic modal.</p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

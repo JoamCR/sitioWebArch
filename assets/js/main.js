@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Script para el modelo 3D
 if (document.getElementById('3d-container')) {
     const scene = new THREE.Scene();
@@ -34,18 +33,11 @@ if (document.getElementById('3d-container')) {
     });
 }
 
-// Animaciones Premium: Parallax y Fade-In
+// Animaciones Premium: Parallax
 window.addEventListener('scroll', () => {
     const scroll = window.scrollY;
     document.querySelectorAll('.parallax').forEach(elem => {
         elem.style.transform = `translateY(${scroll * -0.3}px)`;
-    });
-
-    document.querySelectorAll('[data-i18n]').forEach(elem => {
-        const rect = elem.getBoundingClientRect();
-        if (rect.top < window.innerHeight && rect.bottom > 0) {
-            elem.classList.add('fade-in');
-        }
     });
 });
 
@@ -69,11 +61,11 @@ async function loadTranslations(lang) {
     }
 }
 
-// Inicializar traducciones
+// Inicializar traducciones (se ejecuta una vez)
 (async () => {
     translations.en = await loadTranslations('en');
     translations.es = await loadTranslations('es');
-    loadLanguage(currentLang);
+    loadLanguage(currentLang); // Cargar idioma inicial
 })();
 
 // Función para aplicar idioma
@@ -92,23 +84,85 @@ function loadLanguage(lang) {
     });
 }
 
-// Evento para el toggle de idioma
-document.getElementById('lang-toggle')?.addEventListener('click', () => {
-    const newLang = currentLang === 'es' ? 'en' : 'es';
-    loadLanguage(newLang);
-    document.getElementById('lang-toggle').textContent = `${newLang.toUpperCase()}/ES`;
-});
+// Función para cargar la barra de navegación dinámicamente y configurar eventos
+async function loadNavbar() {
+    const navbarPlaceholder = document.getElementById('navbar-placeholder');
+    if (navbarPlaceholder) {
+        try {
+            const response = await fetch('complementos/navbar.html');
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            const navbarHtml = await response.text();
+            navbarPlaceholder.innerHTML = navbarHtml;
 
-// Animación de Fade-In
-document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('[data-i18n]').forEach(elem => {
-        const rect = elem.getBoundingClientRect();
-        if (rect.top < window.innerHeight && rect.bottom > 0) {
-            elem.classList.add('fade-in');
+            // Re-bind language toggle event listener after navbar is loaded
+            const langToggleButton = document.getElementById('lang-toggle');
+            if (langToggleButton) {
+                langToggleButton.addEventListener('click', () => {
+                    const newLang = currentLang === 'es' ? 'en' : 'es';
+                    loadLanguage(newLang);
+                    langToggleButton.textContent = `${newLang.toUpperCase()}/ES`;
+                });
+                // Set initial text for the toggle button
+                langToggleButton.textContent = `${currentLang.toUpperCase()}/ES`;
+            }
+        } catch (error) {
+            console.error('Error loading navbar:', error);
         }
+    }
+}
+
+// Funciones para abrir y cerrar el modal genérico
+function openModal(title, content) {
+    const modal = document.getElementById('generic-modal');
+    if (modal) {
+        modal.querySelector('.modal-title').textContent = title;
+        modal.querySelector('.modal-body').innerHTML = content;
+        modal.classList.add('active'); // Use 'active' class for showing
+    }
+}
+
+function closeModal() {
+    const modal = document.getElementById('generic-modal');
+    if (modal) {
+        modal.classList.remove('active'); // Use 'active' class for showing
+    }
+}
+
+// Animación de Fade-In y Scroll Triggered Animations
+document.addEventListener('DOMContentLoaded', () => {
+    loadNavbar(); // Cargar navbar primero
+
+    // Event listeners para cerrar el modal
+    const modal = document.getElementById('generic-modal');
+    if (modal) {
+        modal.querySelector('.modal-close').addEventListener('click', closeModal);
+        modal.querySelector('.modal-overlay').addEventListener('click', closeModal);
+    }
+
+    // Intersection Observer for scroll-triggered animations
+    const observerOptions = {
+        root: null, // viewport
+        rootMargin: '0px',
+        threshold: 0.1 // Trigger when 10% of the item is visible
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in');
+                observer.unobserve(entry.target); // Only animate once
+            }
+        });
+    }, observerOptions);
+
+    // Observe elements with data-i18n attribute for fade-in effect
+    document.querySelectorAll('[data-i18n]').forEach(elem => {
+        observer.observe(elem);
     });
 
-    // Aplicar imágenes de fondo dinámicamente
+    // Aplicar imágenes de fondo dinámicamente y efectos hover/touch
     document.querySelectorAll('.service-card').forEach(card => {
         const bgImage = card.getAttribute('data-bg-image');
         if (bgImage) {
@@ -156,6 +210,15 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     });
+    
+    // Add click event listener to service cards to open modal
+    document.querySelectorAll('.service-card').forEach(card => {
+        card.addEventListener('click', () => {
+            const title = card.querySelector('h3').textContent;
+            const details = card.querySelector('.details').innerHTML;
+            openModal(title, details);
+        });
+    });
 });
 
 // Google Analytics (Premium)
@@ -170,50 +233,3 @@ document.addEventListener('DOMContentLoaded', () => {
     gtag('js', new Date());
     gtag('config', 'UA-XXXXX-Y');
 })();
-=======
-// Script para el modelo 3D en visualizaciones-3d.html
-if (document.getElementById('3d-container')) {
-    // Crear la escena
-    const scene = new THREE.Scene();
-    // Configurar la cámara
-    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / 400, 0.1, 1000);
-    // Configurar el renderizador
-    const renderer = new THREE.WebGLRenderer();
-    renderer.setSize(window.innerWidth, 400);
-    document.getElementById('3d-container').appendChild(renderer.domElement);
-
-    // Configurar el fondo de la escena
-    scene.background = new THREE.Color(0xcccccc);
-    // Añadir luz
-    const light = new THREE.DirectionalLight(0xffffff, 1);
-    light.position.set(5, 5, 5);
-    scene.add(light);
-
-    // Crear un cubo como placeholder (reemplazar con un modelo .glTF si lo tienes)
-    const geometry = new THREE.BoxGeometry(1, 1, 1);
-    const material = new THREE.MeshBasicMaterial({ color: 0x172554 });
-    const cube = new THREE.Mesh(geometry, material);
-    scene.add(cube);
-
-    // Posicionar la cámara
-    camera.position.z = 5;
-
-    // Animación del cubo
-    function animate() {
-        requestAnimationFrame(animate);
-        cube.rotation.x += 0.01;
-        cube.rotation.y += 0.01;
-        renderer.render(scene, camera);
-    }
-    animate();
-}
-
-// Ajustar el tamaño del renderizado al redimensionar la ventana
-window.addEventListener('resize', () => {
-    if (document.getElementById('3d-container')) {
-        camera.aspect = window.innerWidth / 400;
-        camera.updateProjectionMatrix();
-        renderer.setSize(window.innerWidth, 400);
-    }
-});
->>>>>>> fd18e06dd4d9898a052b40f4c3d443a16c4d62fc
