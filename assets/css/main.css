@@ -1,44 +1,111 @@
+/* Variables CSS para personalización */
+:root {
+    --primary-bg: #172554; /* Fondo principal */
+    --text-color: #e5e7eb; /* Texto principal */
+    --accent-color: #fbbf24; /* Color de acento (botones, enlaces hover) */
+    --card-bg: #d1d5db; /* Fondo de tarjetas */
+    --font-family: 'Inter', sans-serif; /* Fuente predeterminada */
+}
+
 /* Estilos para las tarjetas de servicios */
 .service-card {
-    position: relative; /* Posición relativa para que el detalle se posicione respecto a la tarjeta */
+    position: relative;
+    overflow: hidden; /* Asegura que la imagen no desborde */
+    background-size: cover; /* Ajusta la imagen al tamaño de la tarjeta */
+    background-position: center; /* Centra la imagen */
+    transition: all 0.3s ease; /* Transición suave para el hover */
 }
+
 .service-card .details {
-    position: absolute; /* Posición absoluta para que el detalle aparezca sobre la tarjeta */
-    top: 100%; /* Justo debajo de la tarjeta */
+    position: absolute;
+    top: 100%;
     left: 0;
-    transform: translateY(10px); /* Desplazamiento inicial para la animación */
-    z-index: 10; /* Asegura que el detalle esté por encima de otros elementos */
+    transform: translateY(10px);
+    z-index: 10;
+    background-color: rgba(23, 37, 84, 0.9); /* Fondo semi-transparente para detalles */
 }
+
 .service-card:hover .details {
-    opacity: 1; /* Mostrar el detalle al pasar el mouse */
-    transform: translateY(0); /* Animación de desplazamiento */
+    opacity: 1;
+    transform: translateY(0);
 }
+
+.service-card h3,
+.service-card .brief {
+    position: relative; /* Para superponer sobre la imagen */
+    z-index: 20; /* Asegura que el texto esté por encima */
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Transición para el resaltado */
+}
+
+.service-card:hover h3,
+.service-card:hover .brief {
+    color: #ffffff; /* Texto blanco en hover */
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /* Sombra para legibilidad */
+}
+
+/* Estilo base de la tarjeta (sin hover) */
+.service-card {
+    background-color: var(--card-bg); /* Fondo gris por defecto */
+    color: #4b5563; /* Texto gris oscuro por defecto */
+}
+
+/* Aplicar imagen de fondo en hover */
+.service-card:hover {
+    background-image: inherit; /* Usa la imagen del atributo data-bg-image */
+    background-color: transparent; /* Elimina el fondo gris */
+}
+
+/* Usar el atributo data-bg-image para el fondo en hover */
+.service-card:hover {
+    background-image: url(attr(data-bg-image url));
+}
+
+/* Ajuste para móviles */
 @media (max-width: 768px) {
     .service-card .details {
-        position: static; /* En móviles, el detalle aparece en flujo normal */
-        opacity: 0; /* Oculto por defecto */
-        max-height: 0; /* Altura inicial 0 para animación */
-        overflow: hidden; /* Oculta el contenido que desborda */
-        transform: none; /* Sin transformación en móviles */
+        position: static;
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        transform: none;
     }
     .service-card:active .details {
-        opacity: 1; /* Mostrar al tocar */
-        max-height: 200px; /* Altura máxima para mostrar el contenido */
-        margin-top: 10px; /* Espacio superior */
+        opacity: 1;
+        max-height: 200px;
+        margin-top: 10px;
+    }
+    .service-card:active {
+        background-image: url(attr(data-bg-image url));
+        background-color: transparent;
+    }
+    .service-card:active h3,
+    .service-card:active .brief {
+        color: #ffffff;
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
     }
 }
 
-/* Estilos de respaldo por si Tailwind falla */
+/* Animaciones Premium */
+.fade-in {
+    opacity: 1 !important;
+    transition: opacity 0.5s ease-in;
+}
+.parallax {
+    transition: transform 0.1s linear;
+}
+
+/* Estilos de respaldo */
 body {
-    background-color: #172554; /* Azul oscuro */
-    color: #e5e7eb; /* Gris claro */
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+    font-family: var(--font-family);
 }
 header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #172554;
+    background-color: var(--primary-bg);
     color: white;
     padding: 1rem;
     z-index: 50;
@@ -64,16 +131,16 @@ header a {
     transition: color 0.3s ease;
 }
 header a:hover {
-    color: #fbbf24; /* Amarillo suave */
+    color: var(--accent-color);
 }
 section {
-    padding-top: 6rem; /* Espacio para el header fijo */
+    padding-top: 6rem;
     padding-bottom: 3rem;
     max-width: 1200px;
     margin: 0 auto;
 }
 footer {
-    background-color: #172554;
+    background-color: var(--primary-bg);
     color: white;
     padding: 1rem;
     text-align: center;

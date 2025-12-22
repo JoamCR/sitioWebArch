@@ -1,0 +1,64 @@
+{
+    "nav": {
+        "home": "Home",
+        "services": "Services",
+        "portfolio": "Portfolio",
+        "3d": "3D",
+        "about": "About",
+        "contact": "Contact"
+    },
+    "home": {
+        "hero": "Innovative Architectural Solutions"
+    },
+    "services": {
+        "title": "Our Services",
+        "design": {
+            "title": "Architectural Design",
+            "brief": "Creation of unique spaces.",
+            "details": "Conceptualization, preliminary plans, and personalized design."
+        },
+        "plans": {
+            "title": "Plans",
+            "brief": "Precise technical details.",
+            "details": "Structural, electrical, and mechanical plans in standard formats."
+        },
+        "renders": {
+            "title": "Renderings",
+            "brief": "Photorealistic images.",
+            "details": "High-resolution rendering, custom adjustments, delivered in 48 hours."
+        },
+        "tours": {
+            "title": "3D Tours",
+            "brief": "Interactive visualization.",
+            "details": "Virtual 3D tours, VR-compatible, delivered in 72 hours."
+        },
+        "quotes": {
+            "title": "Quotes",
+            "brief": "Detailed budgets.",
+            "details": "Cost analysis, materials, and personalized timeline."
+        }
+    },
+    "portfolio": {
+        "title": "Our Portfolio",
+        "project1": "Modern House",
+        "project2": "Commercial Building",
+        "project3": "Rural Villa"
+    },
+    "3d": {
+        "title": "3D Visualizations",
+        "tour1": "3D Tour - Modern House",
+        "tour2": "3D Tour - Commercial Building",
+        "model": "Interactive 3D Model"
+    },
+    "about": {
+        "title": "About Us",
+        "content": "We are a team of architects passionate about transforming ideas into functional and aesthetic spaces. With over 10 years of experience, we offer innovative and personalized solutions."
+    },
+    "contact": {
+        "title": "Contact Us",
+        "name": "Name",
+        "email": "Email",
+        "message": "Message",
+        "submit": "Send"
+    }
+}

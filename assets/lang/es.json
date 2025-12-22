@@ -1,0 +1,64 @@
+{
+    "nav": {
+        "home": "Inicio",
+        "services": "Servicios",
+        "portfolio": "Portafolio",
+        "3d": "3D",
+        "about": "Nosotros",
+        "contact": "Contacto"
+    },
+    "home": {
+        "hero": "Soluciones Arquitectónicas Innovadoras"
+    },
+    "services": {
+        "title": "Nuestros Servicios",
+        "design": {
+            "title": "Diseño Arquitectónico",
+            "brief": "Creación de espacios únicos.",
+            "details": "Conceptualización, planos preliminares y diseño personalizado."
+        },
+        "plans": {
+            "title": "Planos",
+            "brief": "Detalles técnicos precisos.",
+            "details": "Planos estructurales, eléctricos y mecánicos en formatos estándar."
+        },
+        "renders": {
+            "title": "Renderizaciones",
+            "brief": "Imágenes fotorrealistas.",
+            "details": "Render en alta resolución, ajustes personalizados, entrega en 48h."
+        },
+        "tours": {
+            "title": "Recorridos 3D",
+            "brief": "Visualización interactiva.",
+            "details": "Recorridos virtuales en 3D, compatibles con VR, entrega en 72h."
+        },
+        "quotes": {
+            "title": "Cotizaciones",
+            "brief": "Presupuestos detallados.",
+            "details": "Análisis de costos, materiales y cronograma personalizado."
+        }
+    },
+    "portfolio": {
+        "title": "Nuestro Portafolio",
+        "project1": "Casa Moderna",
+        "project2": "Edificio Comercial",
+        "project3": "Villa Rural"
+    },
+    "3d": {
+        "title": "Visualizaciones 3D",
+        "tour1": "Recorrido 3D - Casa Moderna",
+        "tour2": "Recorrido 3D - Edificio Comercial",
+        "model": "Modelo 3D Interactivo"
+    },
+    "about": {
+        "title": "Sobre Nosotros",
+        "content": "Somos un equipo de arquitectos apasionados por transformar ideas en espacios funcionales y estéticos. Con más de 10 años de experiencia, ofrecemos soluciones innovadoras y personalizadas."
+    },
+    "contact": {
+        "title": "Contáctanos",
+        "name": "Nombre",
+        "email": "Correo",
+        "message": "Mensaje",
+        "submit": "Enviar"
+    }
+}

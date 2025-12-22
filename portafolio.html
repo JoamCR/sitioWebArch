@@ -20,7 +20,7 @@
         @font-face {
             font-family: 'Inter';
             src: url('assets/fonts/Inter-SemiBold.woff2') format('woff2');
-            font-weight: 600;
+           <|control666|>: 600;
             font-style: normal;
         }
         body {
@@ -28,44 +28,48 @@
         }
     </style>
 </head>
-<body class="bg-blue-950 text-gray-200">
+<body class="bg-blue-950 text-gray-200" data-lang="es">
     <!-- Barra de navegación fija -->
     <header class="fixed top-0 left-0 w-full bg-blue-950 text-white p-4 z-50 shadow-md">
         <nav class="container mx-auto flex justify-between items-center">
             <!-- Logo/título del sitio -->
             <a href="index.html" class="text-2xl font-semibold">Arquitectura Pro</a>
             <!-- Enlaces de navegación -->
-            <ul class="flex space-x-6">
-                <li><a href="index.html" class="hover:text-yellow-400 transition-colors">Inicio</a></li>
-                <li><a href="servicios.html" class="hover:text-yellow-400 transition-colors">Servicios</a></li>
-                <li><a href="portafolio.html" class="hover:text-yellow-400 transition-colors">Portafolio</a></li>
-                <li><a href="visualizaciones-3d.html" class="hover:text-yellow-400 transition-colors">3D</a></li>
-                <li><a href="sobre-nosotros.html" class="hover:text-yellow-400 transition-colors">Nosotros</a></li>
-                <li><a href="contacto.html" class="hover:text-yellow-400 transition-colors">Contacto</a></li>
-            </ul>
+            <div class="flex items-center space-x-6">
+                <ul class="flex space-x-6">
+                    <li><a href="index.html" class="hover:text-yellow-400 transition-colors" data-i18n="nav.home">Inicio</a></li>
+                    <li><a href="servicios.html" class="hover:text-yellow-400 transition-colors" data-i18n="nav.services">Servicios</a></li>
+                    <li><a href="portafolio.html" class="hover:text-yellow-400 transition-colors" data-i18n="nav.portfolio">Portafolio</a></li>
+                    <li><a href="visualizaciones-3d.html" class="hover:text-yellow-400 transition-colors" data-i18n="nav.3d">3D</a></li>
+                    <li><a href="sobre-nosotros.html" class="hover:text-yellow-400 transition-colors" data-i18n="nav.about">Nosotros</a></li>
+                    <li><a href="contacto.html" class="hover:text-yellow-400 transition-colors" data-i18n="nav.contact">Contacto</a></li>
+                </ul>
+                <!-- Toggle de idioma -->
+                <button id="lang-toggle" class="bg-yellow-400 text-blue-950 px-3 py-1 rounded-lg hover:bg-yellow-500 transition-colors">EN/ES</button>
+            </div>
         </nav>
     </header>
 
     <!-- Sección de Portafolio -->
     <section class="container mx-auto pt-24 py-12">
         <!-- Título de la sección -->
-        <h2 class="text-3xl font-semibold text-center mb-8">Nuestro Portafolio</h2>
+        <h2 class="text-3xl font-semibold text-center mb-8 transition-opacity duration-500 opacity-0" data-i18n="portfolio.title">Nuestro Portafolio</h2>
         <!-- Grid de proyectos -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <!-- Proyecto 1 -->
-            <div class="bg-gray-300 p-4 rounded-lg">
+            <div class="bg-gray-300 p-4 rounded-lg transition-transform duration-500 transform hover:scale-105">
                 <img src="assets/images/proyecto1.webp" alt="Proyecto 1" class="w-full h-48 object-cover rounded" loading="lazy">
-                <p class="mt-2 text-center text-gray-700">Casa Moderna</p>
+                <p class="mt-2 text-center text-gray-700" data-i18n="portfolio.project1">Casa Moderna</p>
             </div>
             <!-- Proyecto 2 -->
-            <div class="bg-gray-300 p-4 rounded-lg">
+            <div class="bg-gray-300 p-4 rounded-lg transition-transform duration-500 transform hover:scale-105">
                 <img src="assets/images/proyecto2.webp" alt="Proyecto 2" class="w-full h-48 object-cover rounded" loading="lazy">
-                <p class="mt-2 text-center text-gray-700">Edificio Comercial</p>
+                <p class="mt-2 text-center text-gray-700" data-i18n="portfolio.project2">Edificio Comercial</p>
             </div>
             <!-- Proyecto 3 -->
-            <div class="bg-gray-300 p-4 rounded-lg">
+            <div class="bg-gray-300 p-4 rounded-lg transition-transform duration-500 transform hover:scale-105">
                 <img src="assets/images/proyecto3.webp" alt="Proyecto 3" class="w-full h-48 object-cover rounded" loading="lazy">
-                <p class="mt-2 text-center text-gray-700">Villa Rural</p>
+                <p class="mt-2 text-center text-gray-700" data-i18n="portfolio.project3">Villa Rural</p>
             </div>
         </div>
     </section>
@@ -74,5 +78,8 @@
     <footer class="bg-blue-950 text-white p-4 text-center">
         <p>© 2025 Arquitectura Pro. Todos los derechos reservados.</p>
     </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
