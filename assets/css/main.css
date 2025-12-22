@@ -106,6 +106,12 @@ body {
     color: var(--text-color);
     font-family: var(--font-family);
 }
+
+/* Ensure header links are visible regardless of dynamic loading */
+#navbar-placeholder a {
+    color: white;
+}
+
 header {
     position: fixed;
     top: 0;

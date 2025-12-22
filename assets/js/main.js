@@ -219,7 +219,27 @@ document.addEventListener('DOMContentLoaded', () => {
             openModal(title, details);
         });
     });
+
+    // Load footer
+    loadFooter();
 });
+
+// Función para cargar el pie de página dinámicamente
+async function loadFooter() {
+    const footerPlaceholder = document.getElementById('footer-placeholder');
+    if (footerPlaceholder) {
+        try {
+            const response = await fetch('complementos/footer.html');
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            const footerHtml = await response.text();
+            footerPlaceholder.innerHTML = footerHtml;
+        } catch (error) {
+            console.error('Error loading footer:', error);
+        }
+    }
+}
 
 // Google Analytics (Premium)
 (function() {

@@ -59,6 +59,31 @@
         "name": "Nombre",
         "email": "Correo",
         "message": "Mensaje",
-        "submit": "Enviar"
+        "submit": "Enviar",
+        "location": "Nuestra Ubicación"
+    },
+    "home": {
+        "hero": "Soluciones Arquitectónicas Innovadoras",
+        "why_choose_us": {
+            "title": "¿Por Qué Elegirnos?",
+            "innovation_title": "Innovación Constante",
+            "innovation_text": "Aplicamos las últimas tendencias y tecnologías para diseños vanguardistas.",
+            "experience_title": "Experiencia Comprobada",
+            "experience_text": "Más de 10 años en el mercado construyendo sueños y realidades.",
+            "satisfaction_title": "Clientes Felices",
+            "satisfaction_text": "Nuestro compromiso es la satisfacción total en cada proyecto."
+        },
+        "featured_projects": {
+            "title": "Proyectos Destacados",
+            "project1_title": "Residencia Moderna",
+            "project1_brief": "Diseño minimalista y funcional.",
+            "project1_details": "Un espacio pensado para la vida contemporánea, integrando luz natural y tecnología inteligente.",
+            "project2_title": "Edificio Corporativo",
+            "project2_brief": "Innovación y eficiencia en cada nivel.",
+            "project2_details": "Diseño arquitectónico que potencia la productividad y el bienestar laboral, con certificaciones de sostenibilidad.",
+            "project3_title": "Espacio Urbano",
+            "project3_brief": "Revitalizando la vida en la ciudad.",
+            "project3_details": "Propuesta innovadora para un parque urbano que fomenta la comunidad y el respeto por el medio ambiente.",
+            "view_all": "Ver Todos los Proyectos"
+        }
     }
-}

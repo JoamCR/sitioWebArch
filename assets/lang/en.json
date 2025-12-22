@@ -59,6 +59,32 @@
         "name": "Name",
         "email": "Email",
         "message": "Message",
-        "submit": "Send"
+        "submit": "Send",
+        "location": "Our Location"
+    },
+    "home": {
+        "hero": "Innovative Architectural Solutions",
+        "why_choose_us": {
+            "title": "Why Choose Us?",
+            "innovation_title": "Constant Innovation",
+            "innovation_text": "We apply the latest trends and technologies for avant-garde designs.",
+            "experience_title": "Proven Experience",
+            "experience_text": "More than 10 years in the market building dreams and realities.",
+            "satisfaction_title": "Happy Clients",
+            "satisfaction_text": "Our commitment is total satisfaction in every project."
+        },
+        "featured_projects": {
+            "title": "Featured Projects",
+            "project1_title": "Modern Residence",
+            "project1_brief": "Minimalist and functional design.",
+            "project1_details": "A space designed for contemporary living, integrating natural light and smart technology.",
+            "project2_title": "Corporate Building",
+            "project2_brief": "Innovation and efficiency at every level.",
+            "project2_details": "Architectural design that boosts productivity and well-being, with sustainability certifications.",
+            "project3_title": "Urban Space",
+            "project3_brief": "Revitalizing city life.",
+            "project3_details": "Innovative proposal for an urban park that fosters community and respect for the environment.",
+            "view_all": "View All Projects"
+        }
     }
 }
