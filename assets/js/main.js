@@ -173,7 +173,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Aplicar opacidad inicial a la imagen
             card.style.backgroundBlendMode = 'overlay';
-            card.style.opacity = '0.2'; // Imagen tenue por defecto
+            card.style.opacity = '0.8'; // Increased opacity for better visibility
 
             // Efecto hover
             card.addEventListener('mouseover', () => {
