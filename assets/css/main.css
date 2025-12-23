@@ -145,7 +145,8 @@ body {
 }
 
 #navbar-placeholder nav a {
-    color: white !important; /* Explicitly set color for nav links with !important */
+    color: white; /* Explicitly set color for nav links */
+    opacity: 1; /* Ensure text is not transparent */
     text-decoration: none;
     transition: color 0.3s ease;
 }
